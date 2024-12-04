@@ -24,7 +24,7 @@ function Gallery() {
     return (
         <Grid className='gallery' container spacing={2} padding={4}>
             {projects.map((project, index) => (
-                <Grid item xs={12} sm={12} md={6} key={project.id}>
+                <Grid item xs={12} sm={6} md={4} key={project.id}>
                     <Card
                         className="card"
                         sx={{ borderRadius: 0, boxShadow: 0 }}

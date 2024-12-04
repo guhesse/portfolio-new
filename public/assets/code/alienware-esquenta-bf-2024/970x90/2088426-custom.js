@@ -1,7 +1,6 @@
 var banner = document.getElementById('banner');
-var legal = document.getElementById('roll-cta');
 
-var tl = gsap.timeline({ repeat: 0, repeatDelay: 1.75 });
+var tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
 gsap.defaults({
 	ease: Quad.easeInOut,
 	force3D: false,
@@ -94,3 +93,12 @@ window.onload = function () {
 	console.log(currentDuration + repeatDelay);
 
 };
+
+//. Remove warn messages from GSAP
+console.warn = (function (oldFunction) {
+	return function () {
+		if (!/GSAP/.test(arguments[0])) {
+			oldFunction.apply(this, arguments);
+		}
+	}
+}(console.warn));

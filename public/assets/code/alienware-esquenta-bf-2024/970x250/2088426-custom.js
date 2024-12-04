@@ -89,6 +89,15 @@ window.onload = function () {
 	//tl.pause(14)
 	var currentDuration = tl.duration();
 	var repeatDelay = tl.repeatDelay();
-	console.log(currentDuration + repeatDelay);
+
 
 };
+
+//. Remove warn messages from GSAP
+console.warn = (function (oldFunction) {
+	return function () {
+		if (!/GSAP/.test(arguments[0])) {
+			oldFunction.apply(this, arguments);
+		}
+	}
+}(console.warn));

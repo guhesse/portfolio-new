@@ -1,0 +1,552 @@
+/*-------------------------------------
+  Reset
+---------------------------------------*/
+
+/******Basic settings**********/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+img {
+  border: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #FFFFFF;
+}
+
+sup {
+  vertical-align: .50px;
+  line-height: 0;
+}
+
+.font-preloader {
+  font-family: 'Roboto';
+  font-weight: 300;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+#frame_one,
+#frame_two,
+#frame_three,
+#frame_four,
+#frame_five {
+  width: 100%;
+  height: 100%;
+}
+
+/*-------------------------------------
+  Layout
+---------------------------------------*/
+
+#ad {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.03093vw;
+}
+
+#banner {
+  position: absolute;
+  background: #deddff;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#clickTAG {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+#border {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  border: 1px solid #444;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*-------------------------------------
+  Frame One frame duration: 3.5s
+---------------------------------------*/
+.txt-con-f1,
+.txt-con-f5 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  width: 30%;
+  height: auto;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.txt-con-f5 {
+  left: 70%;
+}
+
+.f1-pro {
+  position: absolute;
+  width: 270px;
+  height: auto;
+  left: 12%;
+  top: 51%;
+  transform: translateY(-50%);
+}
+
+.bundle-txt-1,
+.bundle-txt-5 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: auto;
+  height: 50px;
+  bottom: 15%;
+  right: 2%;
+}
+
+.sc-txt-1,
+.sc-txt-5 {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 300;
+  text-align: right;
+  color: #500a96;
+}
+
+.proname-txt-1,
+.proname-txt-5 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  text-align: right;
+  color: #500a96;
+}
+
+.badge1,
+.badge5 {
+  font-size: 15px;
+  line-height: 16px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: #500a96;
+}
+
+.title1,
+.title5 {
+  font-size: 30px;
+  line-height: 32px;
+  font-weight: 300;
+  text-align: left;
+  color: #500a96;
+}
+
+.dell-logo {
+  position: absolute;
+  width: 90px;
+  height: auto;
+  top: 6.5%;
+  left: 2.2%;
+  z-index: 9;
+}
+
+
+.funding-box {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  width: auto;
+  height: auto;
+  top: 6.5%;
+  right: 2.2%;
+  z-index: 9;
+}
+
+.funding-logo {
+  width: 120px;
+  height: auto;
+}
+
+.funding-copy {
+  font-size: 11px;
+  font-weight: 500;
+  text-align: right;
+  width: 100%;
+  color: #000;
+}
+
+
+.cta-1,
+.cta-2,
+.cta-3,
+.cta-4 {
+  position: absolute;
+  background: #500a96;
+  color: #fff;
+  border: #500a96 1px solid;
+  text-align: center;
+  bottom: 7.4%;
+  right: 2.2%;
+  display: block;
+  padding: 5px 12px;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.3px;
+  font-weight: 700;
+  white-space: nowrap;
+  vertical-align: middle;
+  z-index: 9;
+}
+
+
+.cta-2 {
+  background: #deddff;
+  color: #500a96;
+  border: #deddff 1px solid;
+
+}
+
+.cta-3 {
+  background: #deddff;
+  color: #500a96;
+  border: #deddff 1px solid;
+}
+
+/*-------------------------------------
+  Frame two  frame duration: 3.5s
+---------------------------------------*/
+.f2-bg {
+  position: absolute;
+  background: #612cb0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-pattern1 {
+  position: absolute;
+  width: 286px;
+  height: auto;
+  right: 0%;
+  top: 39%;
+  transform: translateY(-50%);
+}
+
+.f2-pro {
+  position: absolute;
+  width: 260px;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title2 {
+  position: absolute;
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 40;
+  text-align: left;
+  color: #deddff;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3%;
+}
+
+
+.bundle-txt-2 {
+  position: absolute;
+  width: 96px;
+  height: 50px;
+  bottom: 8%;
+  left: 3.3%;
+}
+
+.sc-txt-2 {
+  position: absolute;
+  font-size: 16px;
+  line-height: 12px;
+  font-weight: 300;
+  text-align: left;
+  color: #deddff;
+  left: 0;
+  top: 0;
+}
+
+.proname-txt-2 {
+  position: absolute;
+  font-size: 14px;
+  line-height: 12px;
+  font-weight: 500;
+  text-align: left;
+  color: #deddff;
+  left: 0;
+  top: 36%;
+}
+
+/*-------------------------------------
+  Frame Three frame duration: 3.5s
+---------------------------------------*/
+
+.img-cont-f3 {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 510px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.f3-bgImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.bg-f3 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: #c8c0ff;
+  z-index: 9;
+}
+
+.bundle-txt-3 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+  width: auto;
+  height: auto;
+  top: 6.7%;
+  right: 2.1%;
+}
+
+.sc-txt-3 {
+  font-size: 20px;
+  line-height: 22px;
+  font-weight: 300;
+  text-align: right;
+  color: #500a96;
+}
+
+.proname-txt-3 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  text-align: right;
+  color: #500a96;
+}
+
+/*-------------------------------------
+  Frame four frame duration: 3.5s
+---------------------------------------*/
+.dell-logo-f5 {
+  position: absolute;
+  width: 174px;
+  height: auto;
+  top: 5%;
+  right: 10.7%;
+  transform: translateX(-50%);
+  z-index: 9;
+}
+
+.bg-pattern4 {
+  position: absolute;
+  width: 286px;
+  height: auto;
+  right: 0%;
+  top: 39%;
+  transform: translateY(-50%);
+}
+
+.f4-pro {
+  position: absolute;
+  width: 282px;
+  height: auto;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.txt-con-f4 {
+  position: absolute;
+  width: 250px;
+  height: 118px;
+  left: 3.3%;
+  top: 12.5%;
+}
+
+.title4 {
+  position: absolute;
+  font-size: 35px;
+  line-height: 37px;
+  font-weight: 300;
+  text-align: left;
+  color: #c8c0ff;
+  top: 5%;
+  left: 0;
+}
+
+.dell-element-4 {
+  position: absolute;
+  top: 91%;
+  left: .5%;
+  width: 36px;
+  height: 9px;
+  background: #c8c0ff;
+  opacity: 0;
+}
+
+.bundle-txt-4 {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: auto;
+  height: auto;
+  bottom: 8%;
+  left: 3.3%;
+}
+
+.sc-txt-4 {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 300;
+  text-align: left;
+  color: #deddff;
+}
+
+.proname-txt-4 {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #deddff;
+}
+
+/*-------------------------------------
+  Frame five frame duration: 3.5s
+---------------------------------------*/
+
+.img-cont-f5 {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.f5-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+/*Roll over*/
+
+#roll-cta {
+  position: absolute;
+  bottom: 20%;
+  right: 2.3%;
+  transform: translateY(-50%);
+  z-index: 99999;
+  width: 70px;
+  height: 10px;
+}
+
+#legal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #deddff;
+  top: -1000px;
+  z-index: 99;
+}
+
+#legal-text {
+  position: absolute;
+  color: #444;
+  width: 100%;
+  height: 100%;
+  font-size: .80px;
+  line-height: 12px;
+  text-align: left;
+  padding: 15px 20px;
+}
+
+#rolltext {
+  color: #000;
+  position: absolute;
+  z-index: 9;
+  width: 70px;
+  height: 10px;
+  height: auto;
+  bottom: 20%;
+  right: 2.3%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  letter-spacing: 0.3px;
+  text-align: right;
+  white-space: nowrap;
+}

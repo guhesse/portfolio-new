@@ -1,7 +1,6 @@
 var banner = document.getElementById('banner');
-var legal = document.getElementById('roll-cta');
 
-var tl = gsap.timeline({ repeat: 0, repeatDelay: 1.75 });
+var tl = gsap.timeline({ repeat: -1, repeatDelay: 2 });
 gsap.defaults({
 	ease: Quad.easeInOut,
 	force3D: false,
@@ -23,7 +22,7 @@ window.onload = function () {
 		.from(".title1", { autoAlpha: 0, stagger: 0.2, left: "-15%" }, "frame1+=.3")
 		.to(" .title1", { autoAlpha: 0 }, "frame1+=2.5")
 		.to(".life-imgf1", { autoAlpha: 0 }, "frame1+=2.5")
-		.to(".f1-bg, .f1-header, .aw-logo, .funding-box", { autoAlpha: 0 }, "frame1+=2.7")
+		.to(".f1-bg, .f1-header, .aw-logo, .cta, .funding-box", { autoAlpha: 0 }, "frame1+=2.7")
 
 		/*frame two*/
 		.add("frame2", "frame1+=3")
@@ -62,7 +61,7 @@ window.onload = function () {
 
 		/*frame five*/
 		.add("frame5", "frame4+=3")
-		.to(".aw-logo, .funding-box", { autoAlpha: 1 }, "frame5")
+		.to(".aw-logo, .cta, .funding-box", { autoAlpha: 1 }, "frame5")
 		.from(".f5-bg, .f5-header, .funding-box2", .75, { autoAlpha: 0 }, "frame5")
 		.from(".f5-pro", { autoAlpha: 0 }, "frame5")
 		.from(".title5", { autoAlpha: 0, stagger: 0.2, left: "-15%" }, "frame5+=.3")
@@ -91,6 +90,14 @@ window.onload = function () {
 
 	var currentDuration = tl.duration();
 	var repeatDelay = tl.repeatDelay();
-	console.log(currentDuration + repeatDelay);
 
 };
+
+//. Remove warn messages from GSAP
+console.warn = (function (oldFunction) {
+	return function () {
+		if (!/GSAP/.test(arguments[0])) {
+			oldFunction.apply(this, arguments);
+		}
+	}
+}(console.warn));

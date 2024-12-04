@@ -66,10 +66,13 @@ sup {
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  position: relative;
-  width: 160px;
-  height: 600px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
   font-size: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  visibility: hidden;
 }
 
 #banner {
@@ -78,9 +81,6 @@ sup {
   display: block;
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  cursor: pointer;
-  visibility: hidden;
 }
 
 #clickTAG {
@@ -290,8 +290,8 @@ sup {
   position: absolute;
   width: 20em;
   height: auto;
-  left: 40%;
-  top: 53.8%;
+  left: 37%;
+  top: 47%;
   transform: translate(-50%, -50%);
 }
 
@@ -300,7 +300,7 @@ sup {
   width: 13.4em;
   height: 7em;
   left: 50%;
-  top: 78%;
+  top: 70%;
   transform: translate(-50%, -50%);
 }
 
@@ -540,8 +540,8 @@ sup {
 .txtcon-f5 {
   position: absolute;
   width: 100%;
-  height: 14em;
-  top: 15%;
+  height: 16em;
+  top: 16%;
   left: 0%;
   text-align: center;
 }
@@ -556,7 +556,7 @@ sup {
   text-transform: uppercase;
   text-align: center;
   white-space: nowrap;
-  color: #fff;
+  color: #a3a0fa;
   top: 0;
   left: 0;
   width: 100%;
@@ -591,15 +591,17 @@ sup {
 
 .protxt-f5 {
   position: absolute;
-  font-size: 1.1em;
+  font-size: 1em;
   line-height: 1.25em;
   font-weight: 700;
-  text-align: left;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #2c098c;
-  left: 10%;
-  top: 64.3%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  top: 65.3%;
 }
 
 /*Roll over*/
