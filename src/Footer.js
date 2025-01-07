@@ -1,34 +1,32 @@
 import React from 'react';
-import { Box, Typography, IconButton } from '@mui/material';
-import { Instagram, Twitter, MailOutline } from '@mui/icons-material';
+import { Box, IconButton } from '@mui/material';
+import { MailOutline, LinkedIn, GitHub } from '@mui/icons-material';
 
 function Footer() {
     return (
         <Box
             component="footer"
+            color="primary"
             sx={{
                 position: 'fixed',
                 bottom: 0,
                 left: 0,
                 right: 0,
-                backgroundColor: 'transparent',
+                backgroundColor: '#ffffff',
                 zIndex: 1300,
                 textAlign: 'center',
                 py: 2,
             }}
         >
-            <Typography variant="body2" sx={{ mb: 1 }}>
-                © GUSTAVOHESSE 2024
-            </Typography>
             <Box>
-                <IconButton color="inherit">
-                    <Instagram />
-                </IconButton>
-                <IconButton color="inherit">
-                    <Twitter />
-                </IconButton>
-                <IconButton color="inherit">
+                <IconButton color="inherit" target='blank' href="mailto:contato@gustavohesse.com.br">
                     <MailOutline />
+                </IconButton>
+                <IconButton color="inherit" target='blank' href='https://github.com/guhesse'>
+                    <GitHub />
+                </IconButton>
+                <IconButton color="inherit" target='blank' href='https://www.linkedin.com/in/guhesse/'>
+                    <LinkedIn />
                 </IconButton>
             </Box>
         </Box>

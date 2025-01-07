@@ -10,7 +10,7 @@ function Navbar() {
     const isActive = (path) => location.pathname === path;
 
     return (
-        <AppBar position="fixed" color="transparent" elevation={0} sx={{ zIndex: 1300 }}>
+        <AppBar position="fixed" color="white" elevation={0} sx={{ zIndex: 1300, backgroundColor: '#ffffff' }}>
             <Toolbar sx={{ justifyContent: 'space-between' }}>
                 <Box component="img" src={logo} alt="Logo" sx={{ height: 25 }} />
                 <Box>
@@ -44,7 +44,7 @@ function Navbar() {
                     >
                         WORK
                     </Button>
-                    <Button
+                    {/* <Button
                         color="inherit"
                         onClick={() => navigate('/about')}
                         sx={{
@@ -103,7 +103,7 @@ function Navbar() {
                         }}
                     >
                         CONTACT
-                    </Button>
+                    </Button> */}
                 </Box>
             </Toolbar>
         </AppBar>

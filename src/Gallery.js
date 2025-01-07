@@ -1,8 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Grid, Card, CardMedia, CardActionArea, Typography } from '@mui/material';
+import { Grid, Card, CardMedia, CardActionArea, Typography, Chip } from '@mui/material';
 import { gsap } from 'gsap';
 import projects from './projects';
+
 import './Gallery.css';
 
 function Gallery() {
@@ -41,9 +42,12 @@ function Gallery() {
                                 <Typography variant="h5" align="center" padding={2} className="card-title">
                                     {project.title}
                                 </Typography>
-                                <Typography variant="h7" align="center" padding={2} className="card-title">
-                                    {project.tags}
-                                </Typography>
+                                <div className="tags-container" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '8px' }}>
+                                    {console.log(project.tags)}
+                                    {project.tags.split(',').map((tag, index) => (
+                                        <Chip key={index} color="white" variant="outlined" label={tag.trim()} />
+                                    ))}
+                                </div>
                             </div>
                         </CardActionArea>
                     </Card>

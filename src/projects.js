@@ -93,24 +93,50 @@ const projects = [
     },
     {
         id: 6,
-        type: 'carrossel',
-        title: "Carrossel Collection - Q4 2024",
-        image: require('./assets/carrossel/dell-carrossel-q4fy2025/thumb.jpg'),
+        type: 'carousel',
+        title: "Carousel Collection - Q4 2024",
+        image: require('./assets/carousel/dell-carousel-q4fy2025/thumb.jpg'),
         code: '/assets/code/dell-tecnologia-essencial-2024/detail/716153-index.html',
         details: [
-            { src: '/assets/code/dell-tecnologia-essencial-2024/250x250/716153-index.html', width: '250px', height: '250px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/300x250/716153-index.html', width: '300px', height: '250px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/336x280/716153-index.html', width: '336px', height: '280px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/160x600/716153-index.html', width: '160px', height: '600px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/300x600/716153-index.html', width: '300px', height: '600px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/320x50/716153-index.html', width: '320px', height: '50px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/320x100/716153-index.html', width: '320px', height: '100px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/728x90/716153-index.html', width: '728px', height: '90px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/970x90/716153-index.html', width: '970px', height: '90px' },
-            { src: '/assets/code/dell-tecnologia-essencial-2024/970x250/716153-index.html', width: '970px', height: '250px' },
+            // 1200x1200
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x1200/1.png', width: '1200px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x1200/2.png', width: '1200px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x1200/3.png', width: '1200px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x1200/4.png', width: '1200px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x1200/5.png', width: '1200px', height: '1200px' },
+            // 960x1200
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/960x1200/1.png', width: '960px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/960x1200/2.png', width: '960px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/960x1200/3.png', width: '960px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/960x1200/4.png', width: '960px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/960x1200/5.png', width: '960px', height: '1200px' },
+            // 1200x628
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x628/1.png', width: '1200px', height: '628px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025//717752/1200x628/2.png', width: '1200px', height: '628px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x628/3.png', width: '1200px', height: '628px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x628/4.png', width: '1200px', height: '628px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/717752/1200x628/5.png', width: '1200px', height: '628px' },
+            // 1200x1200
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x1200/1.png', width: '1200px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x1200/2.png', width: '1200px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x1200/3.png', width: '1200px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x1200/4.png', width: '1200px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x1200/5.png', width: '1200px', height: '1200px' },
+            // 960x1200
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/960x1200/1.png', width: '960px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/960x1200/2.png', width: '960px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/960x1200/3.png', width: '960px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/960x1200/4.png', width: '960px', height: '1200px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/960x1200/5.png', width: '960px', height: '1200px' },
+            // 1200x628
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x628/1.png', width: '1200px', height: '628px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025//714544/1200x628/2.png', width: '1200px', height: '628px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x628/3.png', width: '1200px', height: '628px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x628/4.png', width: '1200px', height: '628px' },
+            { src: '/assets/carousel/dell-carousel-q4fy2025/714544/1200x628/5.png', width: '1200px', height: '628px' }
         ],
-        description: "A series of animated banners for Alienware's Black Friday campaign.",
-        tags: "HTML, CSS, JavaScript, Banner, Animation"
+        description: "A collection of carousels for Dell's Q4 2024 campaign.",
+        tags: "Carousel, HTML, CSS, JavaScript, Animation"
     },
     // Adicione mais projetos aqui
 ];

@@ -2,16 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider} from '@mui/material/styles';
 import reportWebVitals from './reportWebVitals';
 import CssBaseline from '@mui/material/CssBaseline';
-
-const theme = createTheme({
-  typography: {
-    fontFamily: 'proxima-nova, sans-serif',
-  },
-});
-
+import theme from './theme.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
