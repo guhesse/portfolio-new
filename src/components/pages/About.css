@@ -1,0 +1,11 @@
+.about-page {
+    margin-top: 3em;
+    padding-top: 0;
+}
+
+@media (max-width: 600px) {
+    .about-page {
+        padding-top: 5em;
+        height: 90vh;
+    }
+}
