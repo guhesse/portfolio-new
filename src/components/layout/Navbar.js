@@ -15,9 +15,8 @@ function Navbar() {
             <Toolbar sx={{ justifyContent: 'space-between' }}>
                 <Box component="nav">
                     <Link component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Box component="img" src={logo} alt="Logo" sx={{ height: 25, cursor: "pointer" }} />
+                        <Box component="img" src={logo} alt="Logo" sx={{ height: { xs: 20, sm: 25 }, cursor: "pointer" }} />
                     </Link>
-                    {/* Outros itens da Navbar */}
                 </Box>
                 <Box>
                     <Button
@@ -28,6 +27,7 @@ function Navbar() {
                             textTransform: 'none',
                             position: 'relative',
                             fontWeight: isActive('/') ? 'bold' : 'normal',
+                            fontSize: { xs: '0.7rem', sm: '1rem' },
                             '&:hover': {
                                 textDecoration: 'none',
                                 backgroundColor: 'transparent',
@@ -58,6 +58,7 @@ function Navbar() {
                             textTransform: 'none',
                             position: 'relative',
                             fontWeight: isActive('/about') ? 'bold' : 'normal',
+                            fontSize: { xs: '0.7rem', sm: '1rem' },
                             '&:hover': {
                                 textDecoration: 'none',
                                 backgroundColor: 'transparent',

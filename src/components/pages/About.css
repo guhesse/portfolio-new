@@ -1,11 +1,39 @@
 .about-page {
-    margin-top: 3em;
+    margin-top: 0;
     padding-top: 0;
+    background-color: #f6f6f6;
+    min-height: 100vh;
+}
+
+.section {
+    background-color: #f6f6f6;
+    padding: 1.5em 0;
+}
+
+.section#services {
+    min-height: 85vh;
+}
+
+.logo {
+    height: 2.5em;
+}
+
+.logo #dell {
+    height: 3.2em;
 }
 
 @media (max-width: 600px) {
     .about-page {
-        padding-top: 5em;
-        height: 90vh;
+        padding-top: 4em;
+        height: auto;
+        /* Ajusta a altura para conteúdo dinâmico */
+    }
+
+    .logo {
+        height: 1.3em;
+    }
+
+    .logo #dell {
+        height: 2.1em;
     }
 }
