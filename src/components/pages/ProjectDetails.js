@@ -1,16 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Typography, Container, Grid, CardMedia, useMediaQuery, IconButton } from '@mui/material';
 import { ArrowBack, ArrowForward, Close, CropSquare, CropLandscape, CropPortrait } from '@mui/icons-material';
 import Modal from 'react-modal';
-import projects from '../../data/projects';
 import Carousel from '../layout/Carousel';
 import Iframes from '../layout/Iframes';
+import { fetchProjects } from '../../services/api';
 
 Modal.setAppElement('#root');
 
 function ProjectDetails() {
     const { id } = useParams();
+    const [projects, setProjects] = useState([]);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const loadProjects = async () => {
+            try {
+                const data = await fetchProjects();
+                setProjects(data);
+            } catch (error) {
+                setError(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        loadProjects();
+    }, []);
+
     const project = projects.find((project) => project.id === parseInt(id, 10));
 
     const isDesktop = useMediaQuery('(min-width:1024px)');
@@ -20,6 +39,14 @@ function ProjectDetails() {
     const [isOpen, setIsOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [currentFormat, setCurrentFormat] = useState(0);
+
+    if (loading) {
+        return <Typography variant="h4">Loading...</Typography>;
+    }
+
+    if (error) {
+        return <Typography variant="h4">Error: {error.message}</Typography>;
+    }
 
     if (!project) {
         return <Typography variant="h4">Project not found</Typography>;

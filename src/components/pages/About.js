@@ -253,7 +253,7 @@ const About = () => {
                     </Grid>
 
                 </Box>
-                {/* <Box component="section" className='section' id='experience'>
+                <Box component="section" className='section' id='experience'>
                     <Stack container
                         direction="row"
                         sx={{
@@ -271,7 +271,7 @@ const About = () => {
                             <Box ref={el => logosRef.current[6] = el} component="img" src={logos.Sultan} id='sultan' alt="Sultan Logo" className="logo" />
                         </Grid>
                     </Stack>
-                </Box> */}
+                </Box>
             </Grid >
         </div >
     );
