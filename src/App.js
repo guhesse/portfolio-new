@@ -6,12 +6,62 @@ import Gallery from './components/pages/Gallery';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
 import ProjectDetails from './components/pages/ProjectDetails';
+import AnimatedCursor from 'react-animated-cursor';
 import './App.css';
 
 function App() {
+
   return (
     <div className="app-container">
       <Router>
+        <AnimatedCursor
+          innerSize={5}
+          outerSize={35}
+          innerScale={2}
+          outerScale={2}
+          color='0, 0, 0'
+          outerAlpha={0}
+          hasBlendMode={true}
+          innerStyle={{
+            backgroundColor: ' #e0e0e0',
+            mixBlendMode: 'exclusion'
+          }}
+          outerStyle={{
+            border: '3px solid #e0e0e0',
+            mixBlendMode: 'exclusion'
+          }}
+          clickables={[
+            'a',
+            '.MuiChip-root',
+            '.MuiModal-root',
+            '.MuiIconButton-root',
+            '.MuiProjectDetails-root',
+            '.MuiProjectMedia-root',
+            '.MuiCardActionArea-root',
+            '.MuiCardMedia-root',
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            'label[for]',
+            'select',
+            'textarea',
+            'button',
+            '.link',
+            {
+              target: '.custom',
+              options: {
+                innerSize: 12,
+                outerSize: 12,
+                color: '255, 255, 255',
+                outerAlpha: 0.3,
+                innerScale: 0.7,
+                outerScale: 5
+              }
+            }
+          ]}
+        />
         <Navbar />
         <div className="content">
           <Routes>

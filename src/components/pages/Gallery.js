@@ -67,7 +67,7 @@ function Gallery() {
                         variant={filter.includes('video') ? 'filled' : 'outlined'}
                         color={filter.includes('video') ? 'black' : 'black'}
                         icon={filter.includes('video') ? <CheckIcon /> : null}
-                        style={{ marginRight: '8px', cursor: 'pointer' }}
+                        style={{ marginRight: '8px' }}
                     />
                     <Chip
                         label="Static"
@@ -75,7 +75,7 @@ function Gallery() {
                         variant={filter.includes('carousel') ? 'filled' : 'outlined'}
                         color={filter.includes('carousel') ? 'black' : 'black'}
                         icon={filter.includes('carousel') ? <CheckIcon /> : null}
-                        style={{ marginRight: '8px', cursor: 'pointer' }}
+                        style={{ marginRight: '8px' }}
                     />
                     <Chip
                         label="Banner"
@@ -83,7 +83,7 @@ function Gallery() {
                         variant={filter.includes('banner') ? 'filled' : 'outlined'}
                         color={filter.includes('banner') ? 'black' : 'black'}
                         icon={filter.includes('banner') ? <CheckIcon /> : null}
-                        style={{ marginRight: '8px', cursor: 'pointer' }}
+                        style={{ marginRight: '8px' }}
                     />
                     <Chip
                         label="Code"
@@ -91,7 +91,7 @@ function Gallery() {
                         variant={filter.includes('code') ? 'filled' : 'outlined'}
                         color={filter.includes('code') ? 'black' : 'black'}
                         icon={filter.includes('code') ? <CheckIcon /> : null}
-                        style={{ marginRight: '8px', cursor: 'pointer' }}
+                        style={{ marginRight: '8px' }}
                     />
                 </Grid>
                 {filteredProjects.map((project, index) => (
