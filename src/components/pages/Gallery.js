@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Grid, Card, CardMedia, CardActionArea, Typography, Chip, Checkbox } from '@mui/material';
+import { Grid, Card, CardMedia, CardActionArea, Typography, Chip } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 import { gsap } from 'gsap';
 import { fetchProjects } from '../../services/api';
@@ -47,11 +47,7 @@ function Gallery() {
             prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
         );
     };
-
-    const handleResetFilters = () => {
-        setFilter([]);
-    };
-
+    
     const filteredProjects = filter.length === 0 ? projects : projects.filter(project => filter.includes(project.type));
 
     if (loading) return <div style={{ color: "black", position: "absolute", top: "200px", left: "200px" }}>Loading...</div>;

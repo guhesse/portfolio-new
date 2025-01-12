@@ -1,11 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Gus from '../../assets/images/foto-gus.png';
 import BgGus from '../../assets/images/bg-gus.png';
-import { Grid, Box, Typography, Stack, Divider } from '@mui/material';
+import { Grid, Box, Typography, Stack, Divider, Button } from '@mui/material';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './About.css';
 import logos from '../../utils/logos';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,6 +18,7 @@ const About = () => {
     const gusRef = useRef(null);
     const logosRef = useRef([]);
     const servicesRef = useRef([]);
+
 
     const wrapLinesInSpans = (elementRef) => {
         const lines = elementRef.current.innerHTML.split('<br>');
@@ -254,23 +256,57 @@ const About = () => {
 
                 </Box>
                 <Box component="section" className='section' id='experience'>
-                    <Stack container
-                        direction="row"
+                    <Grid container
                         sx={{
-                            marginTop: { xs: 0, md: 5 },
-                            justifyContent: "space-around",
-                            alignItems: "center",
-                            p: 3
-                        }}>
-                        <Grid item xs={12} display="flex" gap={15} justifyContent="space-around" alignItems="center" padding={1} flexWrap="wrap" className="logo">
-                            <Box ref={el => logosRef.current[0] = el} component="img" src={logos.Diniz} id='diniz' alt="Óticas Diniz Logo" className="logo" />
-                            <Box ref={el => logosRef.current[1] = el} component="img" src={logos.Charlie} id='charlie' alt="Charlie Logo" className="logo" />
-                            <Box ref={el => logosRef.current[3] = el} component="img" src={logos.Vml} id='vml' alt="Vml Logo" className="logo" />
-                            <Box ref={el => logosRef.current[4] = el} component="img" src={logos.Dell} id='dell' alt="Dell Logo" className="logo" />
-                            <Box ref={el => logosRef.current[5] = el} component="img" src={logos.Trace} id='trace' alt="Trace Logo" className="logo" />
-                            <Box ref={el => logosRef.current[6] = el} component="img" src={logos.Sultan} id='sultan' alt="Sultan Logo" className="logo" />
+                            position: 'relative',
+                            top: { xs: 0, md: 0 },
+                        }}
+                        justifyContent="center"
+                        alignItems="center"
+                        pt={12}>
+                        <Stack container
+                            direction="row"
+                            sx={{
+                                marginTop: { xs: 0, md: 0 },
+                                justifyContent: "space-around",
+                                alignItems: "center",
+                                p: 3
+                            }}>
+                            <Grid item xs={12} display="flex" gap={15} justifyContent="space-around" alignItems="center" padding={1} flexWrap="wrap" className="logo">
+                                <Box ref={el => logosRef.current[0] = el} component="img" src={logos.Diniz} id='diniz' alt="Óticas Diniz Logo" className="logo" />
+                                <Box ref={el => logosRef.current[1] = el} component="img" src={logos.Charlie} id='charlie' alt="Charlie Logo" className="logo" />
+                                <Box ref={el => logosRef.current[3] = el} component="img" src={logos.Vml} id='vml' alt="Vml Logo" className="logo" />
+                                <Box ref={el => logosRef.current[4] = el} component="img" src={logos.Dell} id='dell' alt="Dell Logo" className="logo" />
+                                <Box ref={el => logosRef.current[5] = el} component="img" src={logos.Alienware} id='alienware' alt="Alienware Logo" className="logo" />
+                                <Box ref={el => logosRef.current[6] = el} component="img" src={logos.Sultan} id='sultan' alt="Sultan Logo" className="logo" />
+                            </Grid>
+
+                        </Stack>
+                        <Grid container display="flex" gap={0} mx={10} sx={{ marginTop: { xs: 0, md: 20 }, flexDirection: { xs: 'column', md: 'row' }, justifyContent: "center", alignItems: "flex-start", p: 3 }}>
+                            <Grid item xs={12} md={5} px={3}>
+                                <Stack gap={3}>
+                                    <Typography variant='h5'>
+                                        Daily Tasks<br />
+                                    </Typography>
+                                    <Divider color="white"></Divider>
+                                    <Typography variant='body2'>
+                                        aa
+                                    </Typography>
+                                </Stack>
+                            </Grid>
+                            <Grid item xs={12} md={5} px={3}>
+                                <Stack gap={3}>
+                                    <Typography variant='h5'>
+                                        Key Accomplishments<br />
+                                    </Typography>
+                                    <Divider color="white"></Divider>
+                                    <Typography variant='body2'>
+                                        aaa
+                                    </Typography>
+                                </Stack>
+                            </Grid>
                         </Grid>
-                    </Stack>
+                    </Grid>
                 </Box>
             </Grid >
         </div >
