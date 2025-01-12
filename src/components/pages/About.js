@@ -1,10 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import Gus from '../../assets/images/foto-gus.png';
 import BgGus from '../../assets/images/bg-gus.png';
-import { Grid, Box, Typography, Card, Stack } from '@mui/material';
+import { Grid, Box, Typography, Stack, Divider } from '@mui/material';
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './About.css';
 import logos from '../../utils/logos';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
     const textRef = useRef(null);
@@ -12,11 +15,8 @@ const About = () => {
     const subTextRef = useRef(null);
     const bgRef = useRef(null);
     const gusRef = useRef(null);
-
-    const descriptionList = [
-        { title: 'Motion, UI/UX & Design', description: 'Movimento, tipografia, cores e layout: tudo em harmonia para contar histórias visuais impactantes. Minha abordagem combina design criativo e funcional, aliada a um fluxo de trabalho otimizado para resultados únicos.' },
-        { title: 'Programação & Automação', description: 'Desenvolvimento de web e criação de ferramentas personalizadas como plugins e automações, aplicando HTML, CSS, JavaScript, React e Node.js. Tecnologia a serviço da eficiência e inovação para as melhores experiências digitais.' },
-    ];
+    const logosRef = useRef([]);
+    const servicesRef = useRef([]);
 
     const wrapLinesInSpans = (elementRef) => {
         const lines = elementRef.current.innerHTML.split('<br>');
@@ -58,6 +58,41 @@ const About = () => {
                 { opacity: 1, top: 0, stagger: 0.05, duration: 0.3, ease: "sine.in" },
                 "-=1"
             );
+
+        gsap.fromTo(servicesRef.current, {
+            opacity: 0,
+            y: 100
+        }, {
+            opacity: 1,
+            y: 0,
+            stagger: 0.2,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: servicesRef.current,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none none'
+            }
+        });
+        gsap.fromTo(logosRef.current, {
+            opacity: 0,
+            y: 50
+        }, {
+            opacity: 1,
+            y: 0,
+            stagger: 0.2,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: logosRef.current,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none none'
+            }
+        });
+
+
     }, []);
 
     const spanStyleLetter = {
@@ -154,30 +189,21 @@ const About = () => {
                     </Grid>
                 </Box>
                 <Box component="section" className='section' id='services'>
-                    <Stack container
-                        direction="row"
-                        spacing={2}
-                        sx={{
-                            marginTop: { xs: 0, md: 5 },
-                            justifyContent: "space-around",
-                            alignItems: "center",
-                            p: 3
-                        }}>
-                        <Grid item xs={12} display="flex" gap={4} justifyContent="space-around" alignItems="center" padding={1} flexWrap="wrap" className="logo">
-                            <Box component="img" src={logos.Diniz} id='diniz' alt="Óticas Diniz Logo" className="logo" />
-                            <Box component="img" src={logos.Charlie} id='charlie' alt="Charlie Logo" className="logo" />
-                            <Box component="img" src={logos.Vml} id='vml' alt="Vml Logo" className="logo" />
-                            <Box component="img" src={logos.Dell} id='dell' alt="Dell Logo" className="logo" />
-                            <Box component="img" src={logos.Trace} id='trace' alt="Trace Logo" className="logo" />
-                            <Box component="img" src={logos.Sultan} id='sultan' alt="Sultan Logo" className="logo" />
-                        </Grid>
-                    </Stack>
-
                     <Grid container
-                        position='relative'
                         sx={{
                             position: 'relative',
-                            top : { xs: 0, md: 20 },
+                        }}
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        pt={{ xs: 0, md: 10 }}
+                        pl={{ xs: 4, md: 14 }}
+                        ref={el => servicesRef.current[0] = el}>
+                        <Typography variant='h3' component='h2' sx={{ textAlign: 'left', mt: 5 }} >I can help you with ...</Typography>
+                    </Grid>
+                    <Grid container
+                        sx={{
+                            position: 'relative',
+                            top: { xs: 0, md: 55 },
                         }}
                         justifyContent="center"
                         alignItems="center"
@@ -186,56 +212,68 @@ const About = () => {
                             justifyItems="center"
                             alignItems="center"
                             gap={3}
-                            xs={12} md={6}>
-                            <Box sx={{ px: { xs: 4, md: 24 } }}>
-                                <Stack gap={3}>
-                                    <Typography variant='body2'>Serviços</Typography>
-                                    <Typography variant='h4'>
-                                        Motion, Design, UX e Programação. <br />
-                                        Tudo junto.
-                                    </Typography>
-                                    <Typography variant='body2'>
-                                        Especializado em criar produtos visuais dinâmicos, integrando design, experiência do usuário e tecnologia para soluções criativas e eficientes.
-                                    </Typography>
+                            xs={12} md={12}>
+                            <Box sx={{ px: { xs: 4, md: 15 } }}>
+                                <Stack direction={{ sx: "column", md: "row" }} gap={10}>
+                                    <Stack gap={3} xs={12} md={4} ref={el => servicesRef.current[1] = el}>
+                                        <Typography variant='body2'>1</Typography>
+                                        <Divider color="white"></Divider>
+                                        <Typography variant='h4'>
+                                            Motion e Design<br />
+                                        </Typography>
+                                        <Typography variant='body2'>
+                                            I create comprehensive visual solutions, from animated videos to static and dynamic assets. My expertise covers advertising, web design (UI/UX), ad banners, landing pages, and complete websites, ensuring a impactful visual experience.
+                                        </Typography>
+                                    </Stack>
+                                    <Stack gap={3} xs={12} md={4} ref={el => servicesRef.current[2] = el} >
+                                        <Typography variant='body2'>2</Typography>
+                                        <Divider color="white"></Divider>
+                                        <Typography variant='h4'>
+                                            Process design<br />
+                                        </Typography>
+                                        <Typography variant='body2'>
+                                            I optimize workflows through process restructuring, implementation of efficient Kanban systems, and development of custom tools. My focus is on increasing your team's productivity and operational efficiency.
+                                        </Typography>
+                                    </Stack>
+                                    <Stack gap={3} xs={12} md={4} ref={el => servicesRef.current[3] = el}>
+                                        <Typography variant='body2'>2</Typography>
+                                        <Divider color="white"></Divider>
+                                        <Typography variant='h4'>
+                                            Web Development<br />
+                                        </Typography>
+                                        <Typography variant='body2'>
+                                            I master essential technologies such as HTML, CSS, JavaScript, React, and Node.js. I offer everything from lightweight, efficient animated banners to complete websites and custom tools. I also develop Photoshop plugins, enhancing your team's creative workflow.
+                                        </Typography>
+                                    </Stack>
                                 </Stack>
                             </Box>
 
-                        </Grid>
-                        <Grid item
-                            xs={12} md={6}
-                            container
-                            justifyContent="center"
-                            alignItems="center"
-                            pt={5}
-                            gap={3}
-                            sx={{ px: { xs: 4, md: 18 } }}>
-                            {descriptionList.map((item, index) => (
-                                <Card key={index}
-                                    container variant="outlined"
-                                    justifyContent="center"
-                                    alignItems="center"
-                                    gap={3}
-                                    sx={{ backgroundColor: 'transparent' }}>
-                                    <Box sx={{ p: 5 }}>
-                                        <Stack
-                                            direction="row"
-                                            sx={{ justifyContent: 'space-between', alignItems: 'center' }}
-                                        >
-                                            <Typography gutterBottom variant="h5" component="div">
-                                                {item.title}
-                                            </Typography>
-                                        </Stack>
-                                        <Typography variant='body2'>{item.description}</Typography>
-                                    </Box>
-                                </Card>
-                            ))}
                         </Grid>
 
                     </Grid>
 
                 </Box>
-            </Grid>
-        </div>
+                {/* <Box component="section" className='section' id='experience'>
+                    <Stack container
+                        direction="row"
+                        sx={{
+                            marginTop: { xs: 0, md: 5 },
+                            justifyContent: "space-around",
+                            alignItems: "center",
+                            p: 3
+                        }}>
+                        <Grid item xs={12} display="flex" gap={15} justifyContent="space-around" alignItems="center" padding={1} flexWrap="wrap" className="logo">
+                            <Box ref={el => logosRef.current[0] = el} component="img" src={logos.Diniz} id='diniz' alt="Óticas Diniz Logo" className="logo" />
+                            <Box ref={el => logosRef.current[1] = el} component="img" src={logos.Charlie} id='charlie' alt="Charlie Logo" className="logo" />
+                            <Box ref={el => logosRef.current[3] = el} component="img" src={logos.Vml} id='vml' alt="Vml Logo" className="logo" />
+                            <Box ref={el => logosRef.current[4] = el} component="img" src={logos.Dell} id='dell' alt="Dell Logo" className="logo" />
+                            <Box ref={el => logosRef.current[5] = el} component="img" src={logos.Trace} id='trace' alt="Trace Logo" className="logo" />
+                            <Box ref={el => logosRef.current[6] = el} component="img" src={logos.Sultan} id='sultan' alt="Sultan Logo" className="logo" />
+                        </Grid>
+                    </Stack>
+                </Box> */}
+            </Grid >
+        </div >
     );
 }
 

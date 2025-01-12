@@ -5,10 +5,13 @@ const API_BASE_URL = 'https://gustavohesse.com.br'; // Substitua pela URL da sua
 export const fetchProjects = async () => {
     try {
         const response = await fetch(`${API_BASE_URL}/projects`);
+        console.log('API response:', response); // Adicione este console log
         if (!response.ok) {
             throw new Error('Failed to fetch projects');
         }
-        return response.json();
+        const data = await response.json();
+        console.log('API data:', data); // Adicione este console log
+        return data;
     } catch (error) {
         console.error('Error fetching projects from API, falling back to local data:', error);
         return projects;

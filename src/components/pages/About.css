@@ -10,8 +10,9 @@
     padding: 1.5em 0;
 }
 
-.section#services {
-    min-height: 85vh;
+.section#services,
+.section#experience {
+    min-height: 90vh;
 }
 
 .logo {
