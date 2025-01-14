@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, IconButton } from '@mui/material';
-import { MailOutline, LinkedIn, GitHub } from '@mui/icons-material';
+import { MailOutline, LinkedIn, GitHub, WhatsApp } from '@mui/icons-material';
 
 function Footer() {
     return (
@@ -27,6 +27,9 @@ function Footer() {
                 </IconButton>
                 <IconButton color="inherit" target='blank' href='https://www.linkedin.com/in/guhesse/'>
                     <LinkedIn />
+                </IconButton>
+                <IconButton color="inherit" target='blank' href='https://wa.me/5511970981101'>
+                    <WhatsApp />
                 </IconButton>
             </Box>
         </Box>

@@ -11,11 +11,11 @@ function Navbar() {
     const isActive = (path) => location.pathname === path;
 
     return (
-        <AppBar position="fixed" color="white" elevation={0} sx={{ zIndex: 10 }}>
+        <AppBar position="fixed" color="fcfcf3" elevation={0} sx={{ zIndex: 10 }}>
             <Toolbar sx={{ justifyContent: 'space-between' }}>
                 <Box component="nav">
                     <Link component={RouterLink} to="/" sx={{ display: 'flex', alignItems: 'center' }}>
-                        <Box component="img" src={logo} alt="Logo" sx={{ height: { xs: 20, sm: 25 }}} />
+                        <Box component="img" src={logo} alt="Logo" sx={{ height: { xs: 20, sm: 25 } }} />
                     </Link>
                 </Box>
                 <Box>

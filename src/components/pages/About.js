@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Gus from '../../assets/images/foto-gus.png';
 import BgGus from '../../assets/images/bg-gus.png';
-import { Grid, Box, Typography, Stack, Divider, Button } from '@mui/material';
+import { Grid, Box, Typography, Stack, Divider } from '@mui/material';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './About.css';
@@ -18,6 +18,7 @@ const About = () => {
     const gusRef = useRef(null);
     const logosRef = useRef([]);
     const servicesRef = useRef([]);
+    const corporationsRef = useRef([]);
 
 
     const wrapLinesInSpans = (elementRef) => {
@@ -93,20 +94,34 @@ const About = () => {
                 toggleActions: 'play none none none'
             }
         });
-
-
+        gsap.fromTo(corporationsRef.current, {
+            opacity: 0,
+            y: 50
+        }, {
+            opacity: 1,
+            y: 0,
+            stagger: 0.2,
+            duration: 1,
+            ease: 'power3.out',
+            scrollTrigger: {
+                trigger: corporationsRef.current,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none none'
+            }
+        });
     }, []);
 
     const spanStyleLetter = {
         fontFamily: "superpop-variable, sans-serif",
         fontVariationSettings: "'wght' 200",
-        color: '#FFBA00',
+        color: '#7D55A7',
     };
 
     const spanStyleSymbol = {
         fontFamily: "superpop-variable, sans-serif",
         fontVariationSettings: "'wght' 200",
-        color: '#FFBA00',
+        color: '#7D55A7',
         verticalAlign: 'top',
         fontSize: '2em',
         position: 'relative',
@@ -209,15 +224,15 @@ const About = () => {
                         }}
                         justifyContent="center"
                         alignItems="center"
-                        pt={12}>
+                        pt={{ xs: 5, md: 12 }}>
                         <Grid container
                             justifyItems="center"
                             alignItems="center"
                             gap={3}
                             xs={12} md={12}>
                             <Box sx={{ px: { xs: 4, md: 15 } }}>
-                                <Stack direction={{ sx: "column", md: "row" }} gap={10}>
-                                    <Stack gap={3} xs={12} md={4} ref={el => servicesRef.current[1] = el}>
+                                <Stack direction={{ sx: "column", md: "row" }} gap={{ xs: 5, md: 10 }}>
+                                    <Stack gap={{ xs: 2, md: 3 }} xs={12} md={4} ref={el => servicesRef.current[1] = el}>
                                         <Typography variant='body2'>1</Typography>
                                         <Divider color="white"></Divider>
                                         <Typography variant='h4'>
@@ -227,7 +242,7 @@ const About = () => {
                                             I create comprehensive visual solutions, from animated videos to static and dynamic assets. My expertise covers advertising, web design (UI/UX), ad banners, landing pages, and complete websites, ensuring a impactful visual experience.
                                         </Typography>
                                     </Stack>
-                                    <Stack gap={3} xs={12} md={4} ref={el => servicesRef.current[2] = el} >
+                                    <Stack gap={{ xs: 2, md: 3 }} xs={12} md={4} ref={el => servicesRef.current[2] = el} >
                                         <Typography variant='body2'>2</Typography>
                                         <Divider color="white"></Divider>
                                         <Typography variant='h4'>
@@ -237,8 +252,8 @@ const About = () => {
                                             I optimize workflows through process restructuring, implementation of efficient Kanban systems, and development of custom tools. My focus is on increasing your team's productivity and operational efficiency.
                                         </Typography>
                                     </Stack>
-                                    <Stack gap={3} xs={12} md={4} ref={el => servicesRef.current[3] = el}>
-                                        <Typography variant='body2'>2</Typography>
+                                    <Stack gap={{ xs: 2, md: 3 }} xs={12} md={4} ref={el => servicesRef.current[3] = el}>
+                                        <Typography variant='body2'>3</Typography>
                                         <Divider color="white"></Divider>
                                         <Typography variant='h4'>
                                             Web Development<br />
@@ -263,7 +278,7 @@ const About = () => {
                         }}
                         justifyContent="center"
                         alignItems="center"
-                        pt={12}>
+                        pt={{ xs: 5, md: 12 }}>
                         <Stack container
                             direction="row"
                             sx={{
@@ -272,7 +287,7 @@ const About = () => {
                                 alignItems: "center",
                                 p: 3
                             }}>
-                            <Grid item xs={12} display="flex" gap={15} justifyContent="space-around" alignItems="center" padding={1} flexWrap="wrap" className="logo">
+                            <Grid item xs={12} display="flex" gap={{ xs: 5, md: 15 }} justifyContent="space-around" alignItems="center" padding={1} flexWrap="wrap" className="logo">
                                 <Box ref={el => logosRef.current[0] = el} component="img" src={logos.Diniz} id='diniz' alt="Óticas Diniz Logo" className="logo" />
                                 <Box ref={el => logosRef.current[1] = el} component="img" src={logos.Charlie} id='charlie' alt="Charlie Logo" className="logo" />
                                 <Box ref={el => logosRef.current[3] = el} component="img" src={logos.Vml} id='vml' alt="Vml Logo" className="logo" />
@@ -282,26 +297,26 @@ const About = () => {
                             </Grid>
 
                         </Stack>
-                        <Grid container display="flex" gap={0} mx={10} sx={{ marginTop: { xs: 0, md: 20 }, flexDirection: { xs: 'column', md: 'row' }, justifyContent: "center", alignItems: "flex-start", p: 3 }}>
-                            <Grid item xs={12} md={5} px={3}>
-                                <Stack gap={3}>
-                                    <Typography variant='h5'>
-                                        Daily Tasks<br />
+                        <Grid container display="flex" gap={5} mx={{ md: 10, sx: 0 }} sx={{ marginTop: { xs: 15, md: 20 }, flexDirection: { xs: 'column', md: 'row' }, justifyContent: "center", alignItems: "flex-start", p: 1 }}>
+                            <Grid item xs={12} md={5} px={3} ref={el => corporationsRef.current[0] = el}>
+                                <Stack gap={{ xs: 2, md: 3 }} >
+                                    <Typography variant='h4'>
+                                        From Retail to Tech Giants<br />
                                     </Typography>
                                     <Divider color="white"></Divider>
                                     <Typography variant='body2'>
-                                        aa
+                                        My career is defined by a diverse range of experiences spanning startups, large corporations, and global accounts, both in advertising agencies and corporate environments. This unique journey extends from retail to cutting-edge technology, including companies such as Óticas Diniz, Sultan, VML, Dell, and Alienware. This trajectory has provided me with a comprehensive and versatile perspective, essential for developing innovative solutions.
                                     </Typography>
                                 </Stack>
                             </Grid>
-                            <Grid item xs={12} md={5} px={3}>
-                                <Stack gap={3}>
-                                    <Typography variant='h5'>
-                                        Key Accomplishments<br />
+                            <Grid item xs={12} md={5} px={3} ref={el => corporationsRef.current[1] = el}>
+                                <Stack gap={{ xs: 2, md: 3 }}>
+                                    <Typography variant='h4'>
+                                        Mastering Adaptability<br />
                                     </Typography>
                                     <Divider color="white"></Divider>
                                     <Typography variant='body2'>
-                                        aaa
+                                        I've acquired valuable skills navigating different organizational cultures and tackling varied challenges. This blend of agency and in-house experiences has not only broadened my technical knowledge but also enhanced my adaptability and strategic vision. Today, I apply this diverse background to each project, offering a unique approach that combines creativity, strategy, and practical results, ready to add significant value to your next challenge.
                                     </Typography>
                                 </Stack>
                             </Grid>
