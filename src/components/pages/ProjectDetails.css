@@ -1,0 +1,24 @@
+/* Adicione este estilo ao seu arquivo CSS */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.bento-item {
+    position: relative;
+}
+
+.bento-item-0 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.bento-item-1,
+.bento-item-2,
+.bento-item-3,
+.bento-item-4,
+.bento-item-5 {
+    grid-column: span 1;
+    grid-row: span 1;
+}

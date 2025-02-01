@@ -1,8 +1,8 @@
 //Development
-// const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://gustavohesse.com.br';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://gustavohesse.com.br';
 
 //Production
-const API_BASE_URL = 'https://gustavohesse.com.br';
+// const API_BASE_URL = 'https://gustavohesse.com.br';
 
 export const fetchProjects = async () => {
     try {

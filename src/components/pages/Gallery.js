@@ -47,7 +47,7 @@ function Gallery() {
             prev.includes(value) ? prev.filter((item) => item !== value) : [...prev, value]
         );
     };
-    
+
     const filteredProjects = filter.length === 0 ? projects : projects.filter(project => filter.includes(project.type));
 
     if (loading) return <div style={{ color: "black", position: "absolute", top: "200px", left: "200px" }}>Loading...</div>;
@@ -57,6 +57,14 @@ function Gallery() {
         <div>
             <Grid className='gallery' container spacing={2} padding={4}>
                 <Grid container justifyContent="center" alignItems="center" padding={1}>
+                    <Chip
+                        label="Brand"
+                        onClick={() => handleFilterChange('brand')}
+                        variant={filter.includes('brand') ? 'filled' : 'outlined'}
+                        color={filter.includes('brand') ? 'black' : 'black'}
+                        icon={filter.includes('brand') ? <CheckIcon /> : null}
+                        style={{ marginRight: '8px' }}
+                    />
                     <Chip
                         label="Video"
                         onClick={() => handleFilterChange('video')}
@@ -82,13 +90,14 @@ function Gallery() {
                         style={{ marginRight: '8px' }}
                     />
                     <Chip
-                        label="Code"
+                        label="Pages"
                         onClick={() => handleFilterChange('code')}
                         variant={filter.includes('code') ? 'filled' : 'outlined'}
                         color={filter.includes('code') ? 'black' : 'black'}
                         icon={filter.includes('code') ? <CheckIcon /> : null}
                         style={{ marginRight: '8px' }}
                     />
+
                 </Grid>
                 {filteredProjects.map((project, index) => (
                     <Grid item xs={12} sm={6} md={4} key={project.id}>

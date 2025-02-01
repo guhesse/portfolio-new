@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 import Carousel from '../layout/Carousel';
 import Iframes from '../layout/Iframes';
 import { fetchProjects } from '../../services/api';
+import './ProjectDetails.css';
 
 Modal.setAppElement('#root');
 
@@ -94,12 +95,23 @@ function ProjectDetails() {
                     sx={{ marginTop: 2 }}
                 />
             )}
-            {project.type === 'banner' && isDesktop && project.code && (
-                <iframe
-                    src={project.code}
-                    title={`${project.title} banner`}
-                    style={{ width: '100%', height: '500px', border: 'none', marginTop: 2, overflow: 'hidden' }}
+            {project.type === 'brand' && project.main && (
+                <CardMedia
+                    component="img"
+                    src={project.main}
+                    alt={`${project.title} brand`}
+                    sx={{ marginTop: 2 }}
                 />
+            )}
+            {project.type === 'banner' && isDesktop && project.code && (
+                <div style={{ position: 'relative' }}>
+                    <iframe
+                        src={project.code}
+                        title={`${project.title} banner`}
+                        style={{ width: '100%', height: '500px', border: 'none', marginTop: 2, overflow: 'hidden' }}
+                    />
+                    <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', pointerEvents: 'none', zIndex: 9998 }} />
+                </div>
             )}
             {project.type === 'banner' && <Iframes details={project.details} isMobile={isMobile} isTablet={isTablet} />}
             {project.type === 'carousel' && (
@@ -139,6 +151,21 @@ function ProjectDetails() {
                     ))}
                 </Grid>
             )}
+            {project.type === 'brand' && (
+                <Grid container spacing={3} marginTop={2}>
+                    {project.details.map((detail, index) => (
+                        <Grid item xs={12} sm={6} md={6} key={index}>
+                            <CardMedia
+                                component="img"
+                                image={detail}
+                                alt={`Project detail ${index + 1}`}
+                                onClick={() => openModal(index)}
+                                style={{ cursor: 'pointer' }}
+                            />
+                        </Grid>
+                    ))}
+                </Grid>
+            )}
             <Modal
                 isOpen={isOpen}
                 onRequestClose={closeModal}
@@ -154,6 +181,7 @@ function ProjectDetails() {
                         bottom: 'auto',
                         marginRight: '-50%',
                         transform: 'translate(-50%, -50%)',
+                        overflow: 'hidden',
                         background: 'transparent',
                         border: 'none',
                         padding: 0,

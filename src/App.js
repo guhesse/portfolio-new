@@ -41,11 +41,13 @@ function App() {
             hasBlendMode={true}
             innerStyle={{
               backgroundColor: ' #e0e0e0',
-              mixBlendMode: 'exclusion'
+              mixBlendMode: 'exclusion',
+              zIndex: 9999 // Certifique-se de que o z-index é alto
             }}
             outerStyle={{
               border: '3px solid #e0e0e0',
-              mixBlendMode: 'exclusion'
+              mixBlendMode: 'exclusion',
+              zIndex: 9999 // Certifique-se de que o z-index é alto
             }}
             clickables={[
               'a',

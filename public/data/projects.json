@@ -12,7 +12,7 @@
             "/assets/videos/alienware-bf-2024/detail4.jpg",
             "/assets/videos/alienware-bf-2024/detail5.jpg"
         ],
-        "description": "The 'Marble Elegance' project is a captivating introduction to the Motorola Edge 50.",
+        "description": "Vídeo promocional dinâmico para a campanha de Black Friday da Alienware, destacando ofertas especiais em produtos de alta performance para gamers",
         "tags": "Video, Animation, Motion Graphics"
     },
     {
@@ -29,7 +29,7 @@
             "/assets/videos/dell-ofertas-todo-dia-q2-w1/detail5.jpg",
             "/assets/videos/dell-ofertas-todo-dia-q2-w1/detail6.jpg"
         ],
-        "description": "The 'Marble Elegance' project is a captivating introduction to the Motorola Edge 50.",
+        "description": "Animação promovendo as ofertas diárias da Dell, mostrando a variedade de produtos e descontos contínuos disponíveis.",
         "tags": "Video, Animation, Motion Graphics"
     },
     {
@@ -46,7 +46,7 @@
             "/assets/videos/dell-bf-2024/detail6.jpg",
             "/assets/videos/dell-bf-2024/detail7.jpg"
         ],
-        "description": "The 'Marble Elegance' project is a captivating introduction to the Motorola Edge 50.",
+        "description": "Vídeo animado apresentando as ofertas exclusivas da Dell para a Black Friday, com foco em laptops, desktops e acessórios com preços promocionais",
         "tags": "Video, Animation, Motion Graphics"
     },
     {
@@ -107,7 +107,7 @@
                 "height": "250px"
             }
         ],
-        "description": "A series of animated banners for Alienware's Black Friday campaign.",
+        "description": "Série de banners animados para a campanha de pré-Black Friday da Alienware, criando expectativa para as próximas grandes ofertas em equipamentos de gaming.",
         "tags": "HTML, CSS, JavaScript, Banner, Animation"
     },
     {
@@ -168,7 +168,7 @@
                 "height": "250px"
             }
         ],
-        "description": "A series of animated banners for Alienware's Black Friday campaign.",
+        "description": "Conjunto de banners interativos destacando a linha de produtos essenciais da Dell, focando em soluções tecnológicas para o dia a dia de trabalho e estudo.",
         "tags": "HTML, CSS, JavaScript, Banner, Animation"
     },
     {
@@ -254,7 +254,93 @@
                 "height": "628px"
             }
         ],
-        "description": "A collection of carousels for Dell's Q4 2024 campaign.",
+        "description": "Coleção de carrosséis de imagens para a campanha do quarto trimestre de 2024 da Dell, exibindo os últimos lançamentos e ofertas sazonais em diversos formatos.",
         "tags": "Carousel, HTML, CSS, JavaScript, Animation"
+    },
+    {
+        "id": 7,
+        "type": "banner",
+        "title": "Escolhas Inteligentes - Alienware",
+        "image": "/assets/code/alienware-escolhas-inteligentes-2024/thumb.png",
+        "code": "/assets/code/alienware-escolhas-inteligentes-2024/detail/2169560-index.html",
+        "details": [
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/250x250/2169560-index.html",
+                "width": "250px",
+                "height": "250px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/300x250/2169560-index.html",
+                "width": "300px",
+                "height": "250px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/336x280/2169560-index.html",
+                "width": "336px",
+                "height": "280px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/160x600/2169560-index.html",
+                "width": "160px",
+                "height": "600px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/300x600/2169560-index.html",
+                "width": "300px",
+                "height": "600px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/320x50/2169560-index.html",
+                "width": "320px",
+                "height": "50px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/320x100/2169560-index.html",
+                "width": "320px",
+                "height": "100px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/728x90/2169560-index.html",
+                "width": "728px",
+                "height": "90px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/970x90/2169560-index.html",
+                "width": "970px",
+                "height": "90px"
+            },
+            {
+                "src": "/assets/code/alienware-escolhas-inteligentes-2024/970x250/2169560-index.html",
+                "width": "970px",
+                "height": "250px"
+            }
+        ],
+        "description": "Série de banners animados promovendo a campanha 'Escolhas Inteligentes' da Alienware, enfatizando a relação custo-benefício dos produtos de alto desempenho para gamers exigentes.",
+        "tags": "HTML, CSS, JavaScript, Banner, Animation"
+    },
+    {
+        "id": 8,
+        "type": "brand",
+        "title": "All Ways - Identidade Visual",
+        "image": "/assets/brand/all-ways/thumb.png",
+        "main": "/assets/brand/all-ways/thumb.png",
+        "details": [
+            "/assets/brand/all-ways/detail2.jpg",
+            "/assets/brand/all-ways/detail3.jpg",
+            "/assets/brand/all-ways/detail4.jpg",
+            "/assets/brand/all-ways/detail5.jpg",
+            "/assets/brand/all-ways/detail6.jpg",
+            "/assets/brand/all-ways/detail7.jpg",
+            "/assets/brand/all-ways/detail8.jpg",
+            "/assets/brand/all-ways/detail9.jpg",
+            "/assets/brand/all-ways/detail10.jpg",
+            "/assets/brand/all-ways/detail11.jpg",
+            "/assets/brand/all-ways/detail12.jpg",
+            "/assets/brand/all-ways/detail13.jpg",
+            "/assets/brand/all-ways/detail14.jpg",
+            "/assets/brand/all-ways/detail15.jpg"
+        ],
+        "description": "Série de banners animados promovendo a campanha 'Escolhas Inteligentes' da Alienware, enfatizando a relação custo-benefício dos produtos de alto desempenho para gamers exigentes.",
+        "tags": "Brand, Design, Strategy"
     }
 ]

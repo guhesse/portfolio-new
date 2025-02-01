@@ -23,14 +23,14 @@ const Iframes = ({ details, isMobile, isTablet }) => {
                                 <iframe
                                     src={details[1].src}
                                     title="Project detail 300x250"
-                                    style={{ width: '300px', height: '250px', border: 'none', overflow: 'hidden' }}
+                                    style={{ width: '300px', height: '250px', border: 'none', overflow: 'hidden', zIndex: 1, position: 'relative', pointerEvents: 'none' }}
                                 />
                             </Grid>
                             <Grid item>
                                 <iframe
                                     src={details[2].src}
                                     title="Project detail 336x280"
-                                    style={{ width: '336px', height: '280px', border: 'none', overflow: 'hidden' }}
+                                    style={{ width: '336px', height: '280px', border: 'none', overflow: 'hidden', zIndex: 1, position: 'relative', pointerEvents: 'none' }}
                                 />
                             </Grid>
                         </Grid>
@@ -39,14 +39,14 @@ const Iframes = ({ details, isMobile, isTablet }) => {
                         <iframe
                             src={details[3].src}
                             title="Project detail 160x600"
-                            style={{ width: '160px', height: '600px', border: 'none', overflow: 'hidden' }}
+                            style={{ width: '160px', height: '600px', border: 'none', overflow: 'hidden', zIndex: 1, position: 'relative', pointerEvents: 'none' }}
                         />
                     </Grid>
                     <Grid item xs={12} sm={6} md={4} style={{ display: 'flex', justifyContent: 'center' }}>
                         <iframe
                             src={details[4].src}
                             title="Project detail 300x600"
-                            style={{ width: '300px', height: '600px', border: 'none', overflow: 'hidden' }}
+                            style={{ width: '300px', height: '600px', border: 'none', overflow: 'hidden', zIndex: 1, position: 'relative', pointerEvents: 'none' }}
                         />
                     </Grid>
                 </>
@@ -60,7 +60,7 @@ const Iframes = ({ details, isMobile, isTablet }) => {
                             <iframe
                                 src={detail.src}
                                 title={`Project detail ${index + 1}`}
-                                style={{ width: detail.width, height: detail.height, border: 'none', overflow: 'hidden' }}
+                                style={{ width: detail.width, height: detail.height, border: 'none', overflow: 'hidden', zIndex: 1, position: 'relative', pointerEvents: 'none' }}
                             />
                         </Grid>
                     );
